@@ -1,12 +1,11 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
-import SelectableList from "../../src/SelectableList";
+import MultiSelectList from "../../src/MultiSelectList";
 import "../../styles.css";
 
 const Demo = () => (
   <div>
-    <h1>react-selectable-list</h1>
-    <SelectableList title="NBA Roster" />
+    <MultiSelectList title="NBA Roster" />
   </div>
 );
 

@@ -1,11 +1,11 @@
+// @flow
 import React, { Component } from "react";
-import t from "prop-types";
 import { render } from "react-dom";
 
+type Props = {
+  title: string
+}
 class Header extends Component {
-  static propTypes = {
-    title: t.string
-  };
 
   render() {
     let { title } = this.props;
