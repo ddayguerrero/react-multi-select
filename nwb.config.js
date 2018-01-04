@@ -1,42 +1,42 @@
 module.exports = {
-  type: "react-component",
+  type: 'react-component',
   npm: {
     esModules: true,
     umd: {
-      global: "ReactMultiSelectList",
+      global: 'ReactMultiSelectList',
       externals: {
-        react: "React"
-      }
-    }
+        react: 'React',
+      },
+    },
   },
   babel: {
-    cherryPick: ["recompose"],
+    cherryPick: ['recompose'],
     plugins: [
       [
-        "css-modules-transform",
+        'css-modules-transform',
         {
-          preprocessCss: "./preprocess-css.js",
-          generateScopedName: "[name]__[local]",
-          extensions: [".scss"],
-          extractCss: "./styles.css"
-        }
-      ]
-    ]
+          preprocessCss: './preprocess-css.js',
+          generateScopedName: '[name]__[local]',
+          extensions: ['.scss'],
+          extractCss: './styles.css',
+        },
+      ],
+    ],
   },
   webpack: {
     rules: {
       babel: {
-        test: /\.jsx?/
+        test: /\.jsx?/,
       },
-      "sass-css": {
+      'sass-css': {
         modules: true,
-        localIdentName: "[name]__[local]"
-      }
+        localIdentName: '[name]__[local]',
+      },
     },
     extra: {
       resolve: {
-        extensions: [".js", "index.js", ".jsx"]
-      }
-    }
-  }
+        extensions: ['.js', 'index.js', '.jsx'],
+      },
+    },
+  },
 };

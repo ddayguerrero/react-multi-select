@@ -1,6 +1,4 @@
-import React, { Component } from 'react';
-import t from "prop-types";
-import { render } from "react-dom";
+import React from 'react';
 
 const ItemList = () => (
   <div> Item List </div>
