@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
-
-import ReactSelectableList from "../../src/index";
+import SelectableList from "../../src/SelectableList";
+import "../../styles.css";
 
 const Demo = () => (
   <div>
-    <h1>react-selectable-list Demo</h1>
-    <ReactSelectableList />
+    <h1>react-selectable-list</h1>
+    <SelectableList title="NBA Roster" />
   </div>
 );
 
