@@ -17,7 +17,8 @@ export const withDefaultProps = defaultProps({
 });
 
 type Props = {
-  title: string
+  title: string,
+  items: Array<Item>
 };
 
 class MultiSelectList extends Component<Props> {
@@ -25,11 +26,11 @@ class MultiSelectList extends Component<Props> {
     super(props);
   }
   render() {
-    const { title } = this.props;
+    const { title, items } = this.props;
     return (
       <div className={styles.list.root}>
         <Header title={title} />
-        <ItemList />
+        <ItemList items={items} />
         <Footer />
       </div>
     );
