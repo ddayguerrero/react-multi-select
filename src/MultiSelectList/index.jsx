@@ -18,19 +18,33 @@ export const withDefaultProps = defaultProps({
 
 type Props = {
   title: string,
-  items: Array<Item>
+  items: Array<Item>,
+  onSelect: Function
 };
 
 class MultiSelectList extends Component<Props> {
   constructor(props: Props) {
     super(props);
+
+    this.state = {
+      selected: []
+    };
   }
+
+  onSelect = selected => {
+    this.setState({
+      selected: selected
+    }, () => {
+      this.props.onSelect(this.state.selected);
+    });
+  };
+
   render() {
     const { title, items } = this.props;
     return (
       <div className={styles.list.root}>
         <Header title={title} />
-        <ItemList items={items} />
+        <ItemList items={items} onSelect={this.onSelect}/>
         <Footer />
       </div>
     );

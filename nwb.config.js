@@ -1,13 +1,10 @@
+/* eslint-disable */
+
 module.exports = {
   type: 'react-component',
   npm: {
     esModules: true,
-    umd: {
-      global: 'ReactMultiSelectList',
-      externals: {
-        react: 'React',
-      },
-    },
+    umd: false,
   },
   babel: {
     cherryPick: ['recompose'],

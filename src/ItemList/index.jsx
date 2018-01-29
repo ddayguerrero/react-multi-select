@@ -4,7 +4,8 @@ import Item from "../Item";
 
 type Props = {
   items: Array<Item>,
-  selectedItems: Set<Item>
+  selectedItems: Set<Item>,
+  onSelect: Function
 };
 
 class ItemList extends Component<Props> {
@@ -18,6 +19,7 @@ class ItemList extends Component<Props> {
     } else {
       this.selectedItems.add(item);
     }
+    this.props.onSelect(this.selectedItems);
   };
 
   render() {
